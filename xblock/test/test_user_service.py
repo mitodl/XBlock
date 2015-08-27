@@ -55,3 +55,12 @@ def test_dummy_user_service_exception():
     user_service = UserService()
     with assert_raises(NotImplementedError):
         user_service.get_current_user()
+
+
+def test_dummy_users_service_exception():
+    """
+    Tests NotImplemented error raised by UserService when not instantiated with kwarg get_all_users.
+    """
+    user_service = UserService()
+    with assert_raises(NotImplementedError):
+        user_service.get_all_users()
